@@ -5,7 +5,7 @@
 
 <div align="center">
 
-<a href="https://github.com/muhtalhakhan/Hacktoberfest2023/graphs/contributors">
+<a href="https://github.com/muhtlahakhan/Hacktoberfest2023/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=muhtalhakhan/Hacktoberfest2023" />
 </a>
   
