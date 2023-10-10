@@ -131,7 +131,7 @@ To get approval of the pull request much quicker and faster (`Follow Me`)🚀
       <img src="https://avatars3.githubusercontent.com/bishwobista?size=100" width="100px;" alt=""/>
     </kbd>
     <br />
-    <sub><b>Muhammad Talha Khan</b></sub>
+    <sub><b>Bishwobista</b></sub>
   </a>
 </div>
 
