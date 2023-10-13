@@ -1,0 +1,28 @@
+class Solution {
+    public int bulbSwitch(int n) {
+     /* 
+     //the bottom code is the brute force methord the optimal one is below
+       int count=0;
+        boolean arr[]=new boolean[n] ;
+        Arrays.fill(arr, Boolean.FALSE);
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=n;j++){
+                if(j%i==0){
+                    arr[j-1]= !arr[j-1];
+                }
+            }
+        }
+        for(int k=0;k<n;k++){
+            if(arr[k]==true){
+                count++;
+            }
+        }
+        return count;
+    */
+           int count = 0;
+        for (int i = 1; i*i <= n; i++) {// iterates over the divisors of n up to the square root of n (i.e., i*i <= n). For each divisor, it increments the count. Since we only count perfect squares among the divisors, this gives us the number of bulbs that will be on after n steps.This optimized solution has a time complexity of O(sqrt(n)), which is much more efficient than the above solution.
+            count++;
+        }
+        return count;
+    }
+}
