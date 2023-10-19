@@ -3,11 +3,11 @@ using namespace std;
 
 void merge(int array[], int const left, int const mid, int const right)
 {
-    int nL = mid - left + 1;
-    int nR = right - mid;
+    int nL = mid - left + 1;    //no of elements in left array
+    int nR = right - mid;       //no of elements in right array
 
-    int *arrL = new int[nL];
-    int *arrR = new int[nR];
+    int *arrL = new int[nL];    //left array
+    int *arrR = new int[nR];    //right array
 
     for (int i = 0; i < nL; i++)
         arrL[i] = array[left + i];
