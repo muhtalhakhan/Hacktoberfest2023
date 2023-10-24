@@ -20,5 +20,3 @@ def alarm():
             winsound.PlaySound("sound.wav", winsound.SND_ASYNC)
 
 alarm()
-
-#NOT WORKING
