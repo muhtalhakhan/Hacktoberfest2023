@@ -1,0 +1,3 @@
+Hey! This is my first time participating in Hacktober fest.
+
+GitHub: https://github.com/vidhijain27
