@@ -8,3 +8,4 @@
 6. [AI for business leaders - Stanford webinar](https://www.youtube.com/watch?v=wUHBoNOmGzs)
 7. [An introduction to Artificial Intelligence - IIT Delhi](https://youtube.com/playlist?list=PLp6ek2hDcoNB_YJCruBFjhF79f5ZHyBuz)
 8. [Harvard's CS50 AI course](https://www.youtube.com/watch?v=5NgNicANyqM&pp=ygUXYXJ0aWZpY2lhbCBpbnRlbGxpZ2VuY2U%3D)
+9. [Introduction to AI for Business - Udemy](https://www.udemy.com/course/introduction-to-ai-for-business/)
