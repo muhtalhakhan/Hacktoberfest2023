@@ -7,12 +7,7 @@
 
 <a href="https://github.com/muhtalhakhan/Hacktoberfest2023/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=muhtalhakhan/Hacktoberfest2023" />
-</a>
-
-<a href="https://github.com/muhtalhakhan/Hacktoberfest2023/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=muhtalhakhan/Hacktoberfest2023" />
-</a>
-  
+</a>  
   </div>
 
 ## This Project Is Perfect For Your First Pull Request
