@@ -1,78 +1,54 @@
-#include <bits/stdc++.h>
-using namespace std;
 
-void merge(int array[], int const left, int const mid, int const right)
-{
-    int nL = mid - left + 1;    //no of elements in left array
-    int nR = right - mid;       //no of elements in right array
-
-    int *arrL = new int[nL];    //left array
-    int *arrR = new int[nR];    //right array
-
-    for (int i = 0; i < nL; i++)
-        arrL[i] = array[left + i];
-    for (int j = 0; j < nR; j++)
-        arrR[j] = array[mid + 1 + j];
-
-    int iL = 0, iR = 0;
-    int I = left; // Initial index of merged array
-
-    while (iL < nL && iR < nR)
+    void merge(int arr[], int l, int m, int r)
     {
-        if (arrL[iL] <= arrR[iR])
-        {
-            array[I] = arrL[iL];
-            iL++;
+         // Your code here
+       
+         int i=l;
+         int j=m+1;
+         //dynamic array
+         int s=r-l+1;
+         vector<int> temp(s);
+         int k=0;
+         while(i<=m && j<=r){
+             if(arr[i]<arr[j]){
+                 temp[k]=arr[i];
+                 k++;i++;
+             }
+             else if(arr[j]<arr[i]){
+                 temp[k]=arr[j];
+                 k++;j++;
+             }
+             else{
+                 temp[k++]=arr[i];
+                 i++;
+                 temp[k++]=arr[j];
+                 j++;
+             }
+         }
+         
+         while(i<=m){
+             temp[k++]=arr[i++];
+         }
+          while(j<=r){
+             temp[k++]=arr[j++];
+         }
+         int n=l;
+         for(int it=0;it<s;it++){
+             arr[n++]=temp[it];
+         }
+    }
+  
+    void mergeSort(int arr[], int l, int r)
+    {
+        //code here
+        if(l>=r){
+            return;
         }
-        else
-        {
-            array[I] = arrR[iR];
-            iR++;
-        }
-        I++;
-    }
-    
-    while (iL < nL)
-    {
-        array[I] = arrL[iL];
-        iL++; I++;
-    }
-    
-    while (iR < nR)
-    {
-        array[I] = arrR[iR];
-        iR++; I++;
-    }
-    delete[] arrL;
-    delete[] arrR;
-}
-
-void mergeSort(int array[], int const begin, int const end)
-{
-    if (begin >= end)
-        return;
-
-    int mid = begin + (end - begin) / 2;
-    mergeSort(array, begin, mid);
-    mergeSort(array, mid + 1, end);
-    merge(array, begin, mid, end);
-}
-
-int main()
-{
-    int n;
-    cin>>n;
-    int arr[n];
-    for (int i=0; i<n; i++)
-    {
-        cin>>arr[i];
+        
+        int mid=(l+r)/2;
+        mergeSort(arr,l,mid);
+        mergeSort(arr,mid+1,r);
+        
+        merge(arr,l,mid,r);
     }
 
-    mergeSort(arr, 0, n - 1);
-
-    for (int i=0; i<n; i++)
-    {
-        cout<<arr[i]<<" ";
-    }
-    return 0;
-}
