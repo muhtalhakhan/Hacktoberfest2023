@@ -1,0 +1,16 @@
+{
+  "env": {
+    "node": true,
+    "es2021": true
+  },
+  "extends": [
+    "google",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "comma-dangle": "off",
+    "linebreak-style": 0,
+    "require-jsdoc": "off"
+  }
+}

@@ -1,0 +1,75 @@
+.accordion {
+  $this: &;
+
+  &_active {
+    #{$this}__body {
+      transition: 0.8s;
+    }
+  }
+
+  &_editor {
+    margin-bottom: 30px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.2s;
+    padding: 3px 0px;
+
+    &:hover {
+      & #{$this}__title {
+        color: var(--color-primary);
+      }
+
+      & svg {
+        stroke: var(--color-primary);
+      }
+    }
+
+    & #{$this}__icon {
+      transition: all ease 0.2s;
+      transform: rotate(180deg);
+    }
+
+    &_active {
+      & #{$this}__icon {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    transition: 0.2s;
+    margin-right: 10px;
+  }
+
+  &__title {
+    font-family: var(--text-family-medium);
+    font-size: 0.875rem;
+    color: var(--text-color-primary);
+    letter-spacing: 0.01rem;
+    transition: 0.2s;
+  }
+
+  &__button {
+  }
+
+  &__body {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+  }
+
+  &__content {
+    padding: 15px 0px 10px 0px;
+  }
+}

@@ -1,0 +1,29 @@
+.code {
+  &__search {
+    width: 100%;
+  }
+
+  &__message {
+    position: fixed;
+    width: 100%;
+    max-width: calc(var(--container-size) - 300px);
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  &__loader,
+  &__empty {
+    grid-column-start: 2;
+    margin: auto;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 2rem;
+    grid-column-gap: 2rem;
+    align-items: center;
+  }
+}

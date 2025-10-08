@@ -1,0 +1,84 @@
+.button {
+  font-family: var(--text-family-medium);
+  font-size: 0.875rem;
+  background: transparent;
+  color: var(--text-color-opacity);
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: var(--radius-medium);
+
+  &_blue {
+    background: var(--color-primary);
+    color: #fff;
+
+    &:hover {
+      background: var(--color-primary-hover);
+    }
+
+    &:active {
+      background: var(--color-primary-active);
+    }
+  }
+
+  &_secondary {
+    background: var(--color-grey);
+    color: var(--text-color-primary);
+
+    &:hover {
+      background: rgba(226, 233, 237, 0.75);
+    }
+
+    &:active {
+      background: rgba(226, 233, 237, 0.75);
+    }
+  }
+
+  &_white {
+    border: 1px solid var(--color-border);
+    color: var(--text-color-primary);
+    background: #fff;
+  }
+
+  &_red {
+    background: #fff5f6;
+    color: var(--color-red);
+
+    &:hover {
+      background: #fff0f1;
+    }
+  }
+
+  &_transparent {
+    color: var(--color-primary);
+
+    &:hover {
+      color: var(--color-primary-hover);
+    }
+
+    &:active {
+      color: var(--color-primary-active);
+    }
+  }
+
+  &_disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  /* &_transparent {
+    background: transparent;
+
+    &:hover {
+      background: transparent;
+    }
+
+    &:active {
+      background: transparent;
+    }
+  } */
+
+  &_default {
+    padding: 0.625rem 2rem;
+  }
+}

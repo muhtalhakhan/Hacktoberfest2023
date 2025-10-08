@@ -1,0 +1,48 @@
+.fileupload {
+  position: relative;
+  padding: 60px 30px;
+  border: 2px dotted #e2e9ed;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__img {
+    width: 20%;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    color: var(--color-text-primary);
+    text-align: center;
+  }
+
+  &__small {
+    opacity: 0.8;
+    font-size: 12px !important;
+  }
+
+  &__button {
+    font-family: var(--text-family-regular);
+  }
+
+  &__input {
+    font-size: 18px;
+    width: 100%;
+    border: none;
+    text-transform: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

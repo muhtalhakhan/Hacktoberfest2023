@@ -1,0 +1,23 @@
+.form {
+  position: relative;
+
+  &__label {
+    font-size: 0.875rem !important;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+  }
+
+  &__input {
+    width: 100%;
+  }
+
+  &__error {
+    position: absolute;
+    left: 0;
+    margin-top: 3px;
+    font-family: var(--text-family-regular);
+    font-size: 0.75rem;
+    color: var(--color-red);
+  }
+}
