@@ -1,0 +1,80 @@
+.toast {
+  $this: &;
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  animation: SlideLeft 0.4s;
+  animation-fill-mode: forwards;
+  width: 100%;
+
+  &__container {
+    padding: 12px 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &_success {
+    background: #dbf8e8;
+
+    #{$this}__text {
+      color: var(--color-green);
+    }
+
+    #{$this}__bar {
+      background: #32af6ab7;
+    }
+  }
+
+  &_error {
+    background: #fff5f6;
+
+    #{$this}__text {
+      color: var(--color-red);
+    }
+
+    #{$this}__bar {
+      background: var(--color-red);
+    }
+  }
+
+  &__text {
+    font-size: 0.875rem;
+  }
+
+  &_delete {
+    animation: SlideRight 0.4s;
+    animation-fill-mode: forwards;
+  }
+
+  &__button {
+    font-size: 12px;
+    margin-left: 1rem;
+    border: none;
+    padding: 8px 2rem;
+  }
+
+  &__bar {
+    height: 5px;
+  }
+}
+
+@keyframes SlideLeft {
+  0% {
+    margin-left: 120%;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes SlideRight {
+  0% {
+    margin-left: 0;
+  }
+
+  100% {
+    margin-left: 120%;
+  }
+}

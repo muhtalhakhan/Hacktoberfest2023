@@ -1,0 +1,23 @@
+.points-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 4px;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: var(--radius-small);
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background: var(--color-grey);
+  }
+
+  span {
+    width: 4px;
+    height: 4px;
+    border-radius: 25px;
+    background: var(--text-color-primary);
+  }
+}

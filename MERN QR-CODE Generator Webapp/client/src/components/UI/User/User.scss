@@ -1,0 +1,62 @@
+.user {
+  $this: &;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    & #{$this}__popup {
+      transform: scale(1);
+    }
+
+    & #{$this}__arrow {
+      transform: rotate(0deg);
+    }
+  }
+
+  &__img {
+    background: var(--color-primary);
+    border-radius: var(--radius-medium);
+    width: 39px;
+    height: 39px;
+    display: flex;
+  }
+
+  &__letter {
+    font-family: var(--text-family-medium);
+    font-size: 21px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: auto;
+  }
+
+  &__container {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    & button {
+      cursor: pointer;
+    }
+  }
+
+  &__name {
+    font-family: var(--text-family-medium);
+    font-size: 0.875rem;
+    color: var(--color-text-primary);
+  }
+
+  &__arrow {
+    transition: 0.2s;
+    margin-left: 10px;
+    transform: rotate(180deg);
+  }
+
+  &__popup {
+    min-width: 230px;
+    width: 100%;
+    left: 0;
+    top: 60px;
+    transform-origin: top left;
+  }
+}

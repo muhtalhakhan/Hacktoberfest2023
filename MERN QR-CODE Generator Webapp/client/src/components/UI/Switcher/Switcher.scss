@@ -1,0 +1,38 @@
+.switch {
+  display: flex;
+  align-items: center;
+
+  &__text {
+    font-size: 0.875rem;
+    margin-right: 15px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: var(--radius-medium);
+    border: 1px solid var(--color-border);
+    padding: 3px;
+  }
+
+  &__button {
+    font-family: var(--text-family-medium);
+    font-size: 0.875rem;
+    padding: 7px 16px;
+    color: var(--text-color-secondary);
+    border-radius: var(--radius-medium);
+    width: 100%;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      color: var(--text-color-primary);
+    }
+
+    &_active {
+      color: var(--text-color-primary);
+      background: var(--color-grey);
+    }
+  }
+}

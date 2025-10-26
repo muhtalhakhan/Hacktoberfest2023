@@ -1,0 +1,60 @@
+.checkbox {
+  $this: &;
+
+  &__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    & + label {
+      display: flex;
+      align-items: center;
+      user-select: none;
+      color: var(--text-color-primary);
+      cursor: pointer;
+    }
+
+    & + label::before {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      border-radius: 4px;
+      margin-right: 10px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 65% 100%;
+      transition: 0.2s;
+    }
+
+    &:checked + label::before {
+      border-color: var(--color-primary);
+      background-color: var(--color-primary);
+      background-image: url('data:image/svg+xml, <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.8334 0.999878L4.41667 7.41658L1.5 4.49988" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      background-size: 75%;
+      background-position: 60% 70%;
+    }
+
+    &:not(:disabled):not(:checked) + label:hover::before {
+      border-color: rgba(42, 133, 255, 0.25);
+      box-shadow: 0px 0px 0px 2px #e9f3ff;
+    }
+
+    &:checked + label:hover::before {
+      border-color: #0a6cf0;
+      background-color: #0a6cf0;
+    }
+
+    &:disabled + label::before {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__label {
+  }
+
+  &__note {
+    font-size: 0.875rem !important;
+  }
+}

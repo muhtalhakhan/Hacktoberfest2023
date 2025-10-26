@@ -1,0 +1,73 @@
+.card {
+  padding: 1rem;
+  max-width: 370px;
+  width: 100%;
+  border-radius: var(--radius-default);
+
+  &__code {
+    width: 100%;
+    height: 100%;
+    padding: 50% 0px;
+    margin-bottom: 10px;
+    border-radius: var(--radius-medium);
+  }
+
+  &__content {
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    font-size: 1rem !important;
+    margin-bottom: 4px;
+  }
+
+  &__link {
+    font-size: 0.875rem !important;
+    cursor: pointer;
+    transition: 0.2s;
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  &__count {
+  }
+
+  &__text {
+    font-size: 12px !important;
+  }
+
+  &__info {
+    cursor: help;
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &__button {
+    & svg {
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    &:hover svg {
+      stroke: var(--color-primary);
+    }
+  }
+
+  &__menu {
+  }
+}

@@ -1,0 +1,65 @@
+.color-picker {
+  $this: &;
+  position: relative;
+  width: 100%;
+
+  &__picker {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    width: 19px;
+    height: 19px;
+    z-index: 2;
+    transition: 0.2s;
+    cursor: pointer;
+    background-color: transparent;
+    appearance: none;
+    border: none;
+    border-radius: 5px;
+
+    &::-webkit-color-swatch-wrapper {
+      padding: 0;
+      border-radius: 5px;
+    }
+
+    &::-webkit-color-swatch {
+      border: 0.5px solid var(--color-border);
+      border-radius: 5px;
+    }
+
+    &:hover {
+      border: 0.5px solid rgba(42, 133, 255, 0.25);
+      box-shadow: 0px 0px 0px 2px #e9f3ff;
+
+      & ~ #{$this}__input {
+        box-shadow: 0px 0px 0px 2px #e9f3ff;
+      }
+    }
+
+    &:focus ~ #{$this}__input {
+      box-shadow: 0px 0px 0px 2px #e9f3ff;
+      border: 0.5px solid rgba(42, 133, 255, 0.25);
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding-left: 2.8125rem !important;
+    padding-right: 5.625rem !important;
+  }
+
+  &__delete {
+    font-size: 12px !important;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-red);
+    }
+  }
+}

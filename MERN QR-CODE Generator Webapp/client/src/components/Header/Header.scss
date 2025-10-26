@@ -1,0 +1,33 @@
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: 2.5rem;
+  }
+
+  &__menu {
+    padding: 2rem 0rem;
+  }
+
+  &__elements {
+    & .button {
+      margin: 1rem 0rem;
+    }
+  }
+
+  &__button {
+  }
+
+  & .user {
+    padding: 1rem 0rem;
+  }
+}
